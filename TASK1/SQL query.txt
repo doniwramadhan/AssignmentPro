@@ -1,0 +1,12 @@
+SQL query syntax
+
+create table task (id int(100) primary key auto_increment, date datetime, name varchar(300),
+email varchar(300), address varchar(300), phone varchar(300), city varchar(300), country varchar(300),
+education varchar(300), photo blob);
+
+INSERT_SQL 	= "insert into task (name,email,address,phone,city,country,education,photo) values (?,?,?,?,?,?,?,?);";
+SELECT_SQL 	= "select name,email,address,phone,city,country,education from task where id =?";
+SELECT_PEEK_SQL ="select id, name, date, city from task ";
+DELETE_SQL 	= "delete from task where id =?;";
+UPDATE_SQL 	= "update task set name=?, email=?, address=?, phone=?, city=?, country=?, education=?, photo=? where id=?;";
+VIEW_SQL 	= "select name, email, address, phone, city, country, education, photo from task where id=?;";
